@@ -1,6 +1,5 @@
 import { useTheme } from "@/components/theme-provider";
 import { useState } from "react";
-import { Toggle } from "./ui/toggle";
 import { DarkModeIcon, LightModeIcon } from "@/icons/theme-icons";
 import { Button } from "./ui/button";
 
