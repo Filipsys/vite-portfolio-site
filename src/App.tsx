@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Separator } from "./components/ui/separator";
 // import { ModeToggle } from "./components/mode-toggle";
 import { HomeComponent } from "./components/HomeComponent";
-import { AboutComponent } from "./components/AboutComponent";
-import { ProjectsComponent } from "./components/ProjectsComponent";
+// import { AboutComponent } from "./components/AboutComponent";
+// import { ProjectsComponent } from "./components/ProjectsComponent";
 
 function App() {
   const [activePage, setActivePage] = useState<"Home" | "About" | "Projects">(
