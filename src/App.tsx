@@ -96,12 +96,12 @@ function App() {
         </main>
       </div>
 
-      <div className="pointer-events-none absolute left-0 top-0 z-0 h-screen w-screen select-none overflow-hidden">
+      <div className="pointer-events-none absolute left-0 top-0 z-0 hidden h-screen w-screen select-none overflow-hidden lg:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 700 700"
-          opacity=".5"
+          opacity=".3"
           className="h-screen w-screen scale-[3] overflow-hidden"
         >
           <defs>
