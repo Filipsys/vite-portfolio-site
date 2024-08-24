@@ -22,9 +22,9 @@ function App() {
         <ModeToggle />
       </div> */}
 
-      <div className="mx-80 flex h-screen items-center justify-center bg-background font-custom2 text-foreground">
-        <nav className="w-2/5 p-8 py-24">
-          <ul className="select-none text-right text-3xl tracking-tight">
+      <div className="h-screen items-center justify-center bg-background font-custom2 text-foreground md:flex-col lg:mx-16 lg:flex lg:flex-row xl:mx-40 2xl:mx-80">
+        <nav className="block h-fit w-screen p-8 lg:w-1/5 2xl:w-2/5">
+          <ul className="flex select-none justify-center gap-x-8 text-xl tracking-tight sm:gap-x-16 sm:text-2xl lg:block lg:text-right lg:text-3xl">
             <motion.li
               className="cursor-pointer"
               whileHover={{
@@ -67,12 +67,12 @@ function App() {
           </ul>
         </nav>
 
-        <div className="h-screen items-center md:hidden lg:flex">
+        <div className="hidden h-dvh lg:flex lg:items-center">
           <Separator orientation="vertical" className="h-1/5" />
         </div>
 
-        <main className="font-sansss relative flex h-screen w-3/5 items-center justify-center p-6 text-xl">
-          <div className="flex h-2/3 w-full items-center justify-center">
+        <main className="relative flex h-auto w-screen items-center justify-center p-6 font-custom2 text-xl lg:h-dvh lg:w-4/5">
+          <div className="flex w-full items-center justify-center md:h-3/4 lg:h-2/3">
             <div className="relative h-full w-full">
               <AnimatePresence>
                 {activePage === "Home" && (

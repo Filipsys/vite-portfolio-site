@@ -25,7 +25,7 @@ export const HomeComponent = () => {
       className="absolute"
     >
       <div className="px-2 py-6">
-        <h1 className="text-3xl font-light tracking-wide">
+        <h1 className="xs:text-2xl text-xl font-light tracking-wide sm:text-3xl">
           Hi, I'm <span className=" ">Filip</span>, a self-taught front-end
           developer from Poland. I mainly work with{" "}
           <span className="text-green-500">React</span>,{" "}
@@ -41,27 +41,29 @@ export const HomeComponent = () => {
       </div>
 
       <div className="px-2 py-6">
-        <h2 className="py-2 text-2xl underline underline-offset-4">Links</h2>
+        <h2 className="xs:text-xl py-2 text-lg underline underline-offset-4">
+          Links
+        </h2>
 
-        <div className="flex flex-col fill-white/50 font-mono text-white/50 *:flex *:cursor-pointer *:justify-between *:text-base *:font-light *:tracking-wider">
+        <div className="*:xs:text-sm flex flex-col fill-white/50 font-mono text-white/50 *:flex *:cursor-pointer *:justify-between *:text-xs *:font-light *:tracking-wider *:sm:text-base">
           <div className="group/github transition-colors duration-200 hover:text-white">
             <a href="https://github.com/Filipsys">
               https://github.com/Filipsys
             </a>
 
             <div className="flex items-center gap-2">
-              <p>Github</p>
+              <p className="xs:block hidden">Github</p>
               <div className="size-4 duration-200 group-hover/github:fill-white">
                 <SmallGithubIcon />
               </div>
             </div>
           </div>
-          <div className="group/linkedin transition-colors duration-200 hover:text-[#0A66C2]">
+          <div className="group/linkedin xs:p-0 py-1 transition-colors duration-200 hover:text-[#0A66C2]">
             <a href="https://linkedin.com/in/filipsysak">
               https://linkedin.com/in/filipsysak
             </a>
             <div className="flex items-center gap-2">
-              <p>LinkedIn</p>
+              <p className="xs:block hidden">LinkedIn</p>
               <div className="size-4 duration-200 group-hover/linkedin:fill-[#0A66C2]">
                 <SmallLinkedinIcon />
               </div>
@@ -71,7 +73,7 @@ export const HomeComponent = () => {
             <a href="mailto:sysakfilip@gmail.com">sysakfilip@gmail.com</a>
 
             <div className="flex items-center gap-2">
-              <p>Email</p>
+              <p className="xs:block hidden">Email</p>
               <div className="size-4 duration-200 group-hover/email:fill-[#EA4335]">
                 <SmallGmailIcon />
               </div>
@@ -86,12 +88,12 @@ export const HomeComponent = () => {
 
       <div className="z-50 px-2">
         <div className="flex items-center">
-          <h2 className="py-2 text-2xl underline underline-offset-4">
+          <h2 className="xs:text-xl py-2 text-lg underline underline-offset-4">
             Tech I know and use
           </h2>
           <div className="mb-auto px-1 py-2">
             <HoverCard>
-              <HoverCardTrigger className="*:size-4">
+              <HoverCardTrigger className="*:hidden *:size-4 *:sm:block">
                 <InfoIcon />
               </HoverCardTrigger>
               <HoverCardContent className="p-2">
@@ -103,13 +105,13 @@ export const HomeComponent = () => {
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-3 gap-3 text-white/50">
+        <div className="mb-8 grid w-full grid-cols-1 gap-3 text-white/50 sm:grid-cols-3">
           <div>
             <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
               - Languages
             </p>
             <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-base font-light text-white/50">
+              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
                 <div className="flex flex-row justify-between">
                   <p>Python</p>
                   <div className="flex items-center justify-center gap-[2px] *:size-3">
@@ -168,7 +170,7 @@ export const HomeComponent = () => {
               - Libraries
             </p>
             <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-base font-light text-white/50">
+              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
                 <div className="flex flex-row justify-between">
                   <p>TailwindCSS</p>
                   <div className="flex items-center justify-center gap-[2px] *:size-3">
@@ -207,7 +209,7 @@ export const HomeComponent = () => {
               - Tools
             </p>
             <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-base font-light text-white/50">
+              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
                 <div className="flex flex-row justify-between">
                   <p>Next.js</p>
                   <div className="flex items-center justify-center gap-[2px] *:size-3">
@@ -251,6 +253,12 @@ export const HomeComponent = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        <div className="block sm:hidden">
+          <p className="p-3 text-center text-xs text-white/50">
+            * The stars indicate my level of proficiency in each technology.
+          </p>
         </div>
       </div>
     </motion.div>
