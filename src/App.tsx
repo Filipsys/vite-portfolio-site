@@ -24,9 +24,9 @@ function App() {
 
       <div className="h-screen items-center justify-center bg-background font-custom2 text-foreground md:flex-col lg:mx-16 lg:flex lg:flex-row xl:mx-40 2xl:mx-80">
         <nav className="block h-fit w-screen p-8 lg:w-1/5 2xl:w-2/5">
-          <ul className="flex select-none justify-center gap-x-8 text-xl tracking-tight sm:gap-x-16 sm:text-2xl lg:block lg:text-right lg:text-3xl">
+          <ul className="flex select-none justify-center gap-x-8 text-xl tracking-tight sm:gap-x-16 sm:text-2xl lg:flex-col lg:items-end lg:text-3xl">
             <motion.li
-              className="cursor-pointer"
+              className="w-fit cursor-pointer"
               whileHover={{
                 x: 5,
                 transition: {
