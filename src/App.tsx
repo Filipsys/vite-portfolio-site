@@ -2,7 +2,7 @@ import "./index.css";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Separator } from "./components/ui/separator";
-import { ModeToggle } from "./components/mode-toggle";
+// import { ModeToggle } from "./components/mode-toggle";
 import { HomeComponent } from "./components/HomeComponent";
 import { AboutComponent } from "./components/AboutComponent";
 import { ProjectsComponent } from "./components/ProjectsComponent";
@@ -22,8 +22,8 @@ function App() {
         <ModeToggle />
       </div> */}
 
-      <div className="font-custom2 mx-80 flex h-screen items-center justify-center bg-background text-foreground">
-        <nav className="w-2/5 p-6 py-24">
+      <div className="mx-80 flex h-screen items-center justify-center bg-background font-custom2 text-foreground">
+        <nav className="w-2/5 p-8 py-24">
           <ul className="select-none text-right text-3xl tracking-tight">
             <motion.li
               className="cursor-pointer"
@@ -71,26 +71,28 @@ function App() {
           <Separator orientation="vertical" className="h-1/5" />
         </div>
 
-        <main
-          className={`font-sansss relative h-screen w-3/5 p-6 py-64 text-xl`}
-        >
-          <AnimatePresence>
-            {activePage === "Home" && (
-              <motion.div key="home">
-                <HomeComponent />
-              </motion.div>
-            )}
-            {activePage === "About" && (
-              <motion.div key="about">
-                <AboutComponent />
-              </motion.div>
-            )}
-            {activePage === "Projects" && (
-              <motion.div key="projects">
-                <ProjectsComponent />
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <main className="font-sansss relative flex h-screen w-3/5 items-center justify-center p-6 text-xl">
+          <div className="flex h-2/3 w-full items-center justify-center">
+            <div className="relative h-full w-full">
+              <AnimatePresence>
+                {activePage === "Home" && (
+                  <motion.div key="home">
+                    <HomeComponent />
+                  </motion.div>
+                )}
+                {activePage === "About" && (
+                  <motion.div key="about">
+                    <AboutComponent />
+                  </motion.div>
+                )}
+                {activePage === "Projects" && (
+                  <motion.div key="projects">
+                    <ProjectsComponent />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
         </main>
       </div>
 
@@ -99,7 +101,7 @@ function App() {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 700 700"
-          opacity=".7"
+          opacity=".5"
           className="h-screen w-screen scale-[3] overflow-hidden"
         >
           <defs>
@@ -129,7 +131,7 @@ function App() {
                 surfaceScale="29"
                 specularConstant="1"
                 specularExponent="20"
-                lighting-color="#3058b6"
+                lighting-color="#aaaaaa"
                 x="0%"
                 y="0%"
                 width="100%"
@@ -145,7 +147,7 @@ function App() {
           <rect
             width="700"
             height="700"
-            fill="#7957a8"
+            fill="#aaaaaa"
             filter="url(#nnnoise-filter)"
           ></rect>
         </svg>
