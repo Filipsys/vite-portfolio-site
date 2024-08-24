@@ -22,7 +22,7 @@ export const HomeComponent = () => {
       exit={{ opacity: 0, y: -20, scale: 0.95 }}
       transition={{ duration: 0.2 }}
       key={1}
-      className="absolute"
+      className=""
     >
       <div className="px-2 py-6">
         <h1 className="xs:text-2xl text-xl font-light tracking-wide sm:text-3xl">

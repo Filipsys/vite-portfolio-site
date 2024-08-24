@@ -8,9 +8,9 @@ export const ProjectsComponent = () => {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.2 }}
       key={2}
-      className="absolute"
+      className=""
     >
-      <div>
+      <div className="flex h-full w-full flex-col items-center justify-center">
         <h1 className="text-3xl font-light">Projects</h1>
 
         <p>Coming soon</p>

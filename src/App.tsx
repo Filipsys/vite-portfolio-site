@@ -26,7 +26,7 @@ function App() {
         <nav className="block h-fit w-screen p-8 lg:w-1/5 2xl:w-2/5">
           <ul className="flex select-none justify-center gap-x-8 text-xl tracking-tight sm:gap-x-16 sm:text-2xl lg:flex-col lg:items-end lg:text-3xl">
             <motion.li
-              className="w-fit cursor-pointer"
+              className="cursor-pointer"
               whileHover={{
                 x: 5,
                 transition: {
@@ -39,28 +39,30 @@ function App() {
               </a>
             </motion.li>
             <motion.li
-              className="cursor-pointer"
-              whileHover={{
-                x: 5,
-                transition: {
-                  duration: 0.25,
-                },
-              }}
+              className="line-through"
+              // className="cursor-pointer"
+              // whileHover={{
+              //   x: 5,
+              //   transition: {
+              //     duration: 0.25,
+              //   },
+              // }}
             >
-              <a onClick={() => handleClick("About")} className="">
+              <a /* onClick={() => handleClick("About")} */ className="">
                 About
               </a>
             </motion.li>
             <motion.li
-              className="cursor-pointer"
-              whileHover={{
-                x: 5,
-                transition: {
-                  duration: 0.25,
-                },
-              }}
+              className="line-through"
+              // className="cursor-pointer"
+              // whileHover={{
+              //   x: 5,
+              //   transition: {
+              //     duration: 0.25,
+              //   },
+              // }}
             >
-              <a onClick={() => handleClick("Projects")} className="">
+              <a /* onClick={() => handleClick("Projects")} */ className="">
                 Projects
               </a>
             </motion.li>
@@ -71,16 +73,16 @@ function App() {
           <Separator orientation="vertical" className="h-1/5" />
         </div>
 
-        <main className="relative flex h-auto w-screen items-center justify-center p-6 font-custom2 text-xl lg:h-dvh lg:w-4/5">
-          <div className="flex w-full items-center justify-center md:h-3/4 lg:h-2/3">
-            <div className="relative h-full w-full">
+        <main className="flex w-screen items-center justify-center p-6 font-custom2 text-xl lg:h-dvh lg:w-4/5">
+          <div className="w-full">
+            <div className="relative w-full">
               <AnimatePresence>
                 {activePage === "Home" && (
                   <motion.div key="home">
                     <HomeComponent />
                   </motion.div>
                 )}
-                {activePage === "About" && (
+                {/* {activePage === "About" && (
                   <motion.div key="about">
                     <AboutComponent />
                   </motion.div>
@@ -89,14 +91,14 @@ function App() {
                   <motion.div key="projects">
                     <ProjectsComponent />
                   </motion.div>
-                )}
+                )} */}
               </AnimatePresence>
             </div>
           </div>
         </main>
       </div>
 
-      <div className="pointer-events-none absolute left-0 top-0 z-0 hidden h-screen w-screen select-none overflow-hidden lg:block">
+      {/* <div className="pointer-events-none absolute left-0 top-0 z-0 hidden h-screen w-screen select-none overflow-hidden lg:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -151,7 +153,7 @@ function App() {
             filter="url(#nnnoise-filter)"
           ></rect>
         </svg>
-      </div>
+      </div> */}
     </>
   );
 }
