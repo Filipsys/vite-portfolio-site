@@ -15,6 +15,38 @@ import {
 } from "@/components/ui/hover-card";
 
 export const HomeComponent = () => {
+  const WHATIUSEDICT = {
+    languages: [
+      { type: "Python", link: "https://www.python.org/", stars: 5 },
+      { type: "JavaScript", link: "https://www.javascript.com/", stars: 4 },
+      { type: "TypeScript", link: "https://www.typescriptlang.org/", stars: 3 },
+      { type: "HTML + CSS", link: "https://www.w3.org/html/", stars: 5 },
+      { type: "SQL", link: "https://www.sql.org/", stars: 4 },
+    ],
+    libraries: [
+      { type: "TailwindCSS", link: "https://tailwindcss.com/", stars: 3 },
+      { type: "Drizzle", link: "https://drizzle.dev/", stars: 2 },
+      { type: "React", link: "https://reactjs.org/", stars: 3 },
+      {
+        type: "Framer motion",
+        link: "https://www.framer.com/motion/",
+        stars: 2,
+      },
+      {
+        type: "Discord.py",
+        link: "https://discordpy.readthedocs.io/en/stable/",
+        stars: 5,
+      },
+    ],
+    tools: [
+      { type: "Next.js", link: "https://nextjs.org/", stars: 3 },
+      { type: "Git", link: "https://git-scm.com/", stars: 4 },
+      { type: "Vite", link: "https://vitejs.dev/", stars: 2 },
+      { type: "Bun", link: "https://bun.sh/", stars: 1 },
+      { type: "Express", link: "https://expressjs.com/", stars: 3 },
+    ],
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -25,7 +57,7 @@ export const HomeComponent = () => {
       className=""
     >
       <div className="px-2 py-6">
-        <h1 className="xs:text-2xl text-xl font-light tracking-wide sm:text-3xl">
+        <h1 className="text-xl font-light tracking-wide xs:text-2xl sm:text-3xl">
           Hi, I'm <span className=" ">Filip</span>, a self-taught front-end
           developer from Poland. I mainly work with{" "}
           <span className="text-green-500">React</span>,{" "}
@@ -41,29 +73,29 @@ export const HomeComponent = () => {
       </div>
 
       <div className="px-2 py-6">
-        <h2 className="xs:text-xl py-2 text-lg underline underline-offset-4">
+        <h2 className="py-2 text-lg underline underline-offset-4 xs:text-xl">
           Links
         </h2>
 
-        <div className="*:xs:text-sm flex flex-col fill-white/50 font-mono text-white/50 *:flex *:cursor-pointer *:justify-between *:text-xs *:font-light *:tracking-wider *:sm:text-base">
+        <div className="flex flex-col fill-white/50 font-mono text-white/50 *:flex *:cursor-pointer *:justify-between *:text-xs *:font-light *:tracking-wider *:xs:text-sm *:sm:text-base">
           <div className="group/github transition-colors duration-200 hover:text-white">
             <a href="https://github.com/Filipsys">
               https://github.com/Filipsys
             </a>
 
             <div className="flex items-center gap-2">
-              <p className="xs:block hidden">Github</p>
+              <p className="hidden xs:block">Github</p>
               <div className="size-4 duration-200 group-hover/github:fill-white">
                 <SmallGithubIcon />
               </div>
             </div>
           </div>
-          <div className="group/linkedin xs:p-0 py-1 transition-colors duration-200 hover:text-[#0A66C2]">
+          <div className="group/linkedin py-1 transition-colors duration-200 hover:text-[#0A66C2] xs:p-0">
             <a href="https://linkedin.com/in/filipsysak">
               https://linkedin.com/in/filipsysak
             </a>
             <div className="flex items-center gap-2">
-              <p className="xs:block hidden">LinkedIn</p>
+              <p className="hidden xs:block">LinkedIn</p>
               <div className="size-4 duration-200 group-hover/linkedin:fill-[#0A66C2]">
                 <SmallLinkedinIcon />
               </div>
@@ -73,7 +105,7 @@ export const HomeComponent = () => {
             <a href="mailto:sysakfilip@gmail.com">sysakfilip@gmail.com</a>
 
             <div className="flex items-center gap-2">
-              <p className="xs:block hidden">Email</p>
+              <p className="hidden xs:block">Email</p>
               <div className="size-4 duration-200 group-hover/email:fill-[#EA4335]">
                 <SmallGmailIcon />
               </div>
@@ -88,7 +120,7 @@ export const HomeComponent = () => {
 
       <div className="z-50 px-2">
         <div className="flex items-center">
-          <h2 className="xs:text-xl py-2 text-lg underline underline-offset-4">
+          <h2 className="py-2 text-lg underline underline-offset-4 xs:text-xl">
             Tech I know and use
           </h2>
           <div className="mb-auto px-1 py-2">
@@ -106,153 +138,39 @@ export const HomeComponent = () => {
         </div>
 
         <div className="mb-8 grid w-full grid-cols-1 gap-3 text-white/50 sm:grid-cols-3">
-          <div>
-            <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
-              - Languages
-            </p>
-            <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
-                <div className="flex flex-row justify-between">
-                  <p>Python</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>JavaScript</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>TypeScript</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>HTML + CSS</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>SQL</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
-              - Libraries
-            </p>
-            <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
-                <div className="flex flex-row justify-between">
-                  <p>TailwindCSS</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>Drizzle</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>Discord.py</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
-              - Tools
-            </p>
-            <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
-              <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
-                <div className="flex flex-row justify-between">
-                  <p>Next.js</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>Vite</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>Bun</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-                <div className="flex flex-row justify-between">
-                  <p>Express</p>
-                  <div className="flex items-center justify-center gap-[2px] *:size-3">
-                    <TinyStarIcon />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                    <TinyStarIcon fill={true} />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {Object.entries(WHATIUSEDICT).map(([key, value]) => (
+            <div key={key}>
+              <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
+                - {key}
+              </p>
+              <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
+                <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
+                  {value.map((item) => (
+                    <div
+                      key={item.type}
+                      className="flex flex-row justify-between"
+                    >
+                      <motion.a
+                        href={item.link}
+                        target="_blank"
+                        className="line-clamp-1 underline-offset-4 hover:underline"
+                      >
+                        {item.type}
+                      </motion.a>
+                      <div className="flex items-center justify-center gap-[2px] *:size-3">
+                        {[...Array(5 - item.stars)].map((_, i) => (
+                          <TinyStarIcon key={i} />
+                        ))}
+                        {[...Array(item.stars)].map((_, i) => (
+                          <TinyStarIcon key={i} fill={true} />
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+          ))}
         </div>
 
         <div className="block sm:hidden">

@@ -2,8 +2,9 @@ import "./index.css";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Separator } from "./components/ui/separator";
-// import { ModeToggle } from "./components/mode-toggle";
 import { HomeComponent } from "./components/HomeComponent";
+// import { ModeToggle } from "./components/mode-toggle";
+// import { GridSVG } from "./icons/grid-svg";
 // import { AboutComponent } from "./components/AboutComponent";
 // import { ProjectsComponent } from "./components/ProjectsComponent";
 
@@ -21,8 +22,8 @@ function App() {
       {/* <div className="absolute right-0 top-0 aspect-square">
         <ModeToggle />
       </div> */}
-
-      <div className="h-screen items-center justify-center bg-background font-custom2 text-foreground md:flex-col lg:mx-16 lg:flex lg:flex-row xl:mx-40 2xl:mx-80">
+      {/* bg-background */}
+      <div className="h-screen items-center justify-center font-custom2 text-foreground md:flex-col lg:mx-16 lg:flex lg:flex-row xl:mx-40 2xl:mx-80">
         <nav className="block h-fit w-screen p-8 lg:w-1/5 2xl:w-2/5">
           <ul className="flex select-none justify-center gap-x-8 text-xl tracking-tight sm:gap-x-16 sm:text-2xl lg:flex-col lg:items-end lg:text-3xl">
             <motion.li
@@ -40,6 +41,19 @@ function App() {
             </motion.li>
             <motion.li
               className="line-through"
+
+              // className="cursor-pointer"
+              // whileHover={{
+              //   x: 5,
+              //   transition: {
+              //     duration: 0.25,
+              //   },
+              // }}
+            >
+              <a /*onClick={() => handleClick("About")}*/ className="">About</a>
+            </motion.li>
+            <motion.li
+              className="line-through"
               // className="cursor-pointer"
               // whileHover={{
               //   x: 5,
@@ -49,7 +63,7 @@ function App() {
               // }}
             >
               <a /* onClick={() => handleClick("About")} */ className="">
-                About
+                Notes
               </a>
             </motion.li>
             <motion.li
@@ -97,62 +111,12 @@ function App() {
           </div>
         </main>
       </div>
+      {/* <div className="pointer-events-none absolute left-0 top-0 -z-50 hidden h-screen w-screen select-none overflow-hidden lg:block">
+        <div className="absolute h-96 w-96 rounded-full"></div>
 
-      {/* <div className="pointer-events-none absolute left-0 top-0 z-0 hidden h-screen w-screen select-none overflow-hidden lg:block">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          viewBox="0 0 700 700"
-          opacity=".3"
-          className="h-screen w-screen scale-[3] overflow-hidden"
-        >
-          <defs>
-            <filter
-              id="nnnoise-filter"
-              x="-20%"
-              y="-20%"
-              width="140%"
-              height="140%"
-              filterUnits="objectBoundingBox"
-              primitiveUnits="userSpaceOnUse"
-              color-interpolation-filters="linearRGB"
-            >
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.162"
-                numOctaves="4"
-                seed="15"
-                stitchTiles="stitch"
-                x="0%"
-                y="0%"
-                width="100%"
-                height="100%"
-                result="turbulence"
-              ></feTurbulence>
-              <feSpecularLighting
-                surfaceScale="29"
-                specularConstant="1"
-                specularExponent="20"
-                lighting-color="#aaaaaa"
-                x="0%"
-                y="0%"
-                width="100%"
-                height="100%"
-                in="turbulence"
-                result="specularLighting"
-              >
-                <feDistantLight azimuth="3" elevation="133"></feDistantLight>
-              </feSpecularLighting>
-            </filter>
-          </defs>
-          <rect width="700" height="700" fill="transparent"></rect>
-          <rect
-            width="700"
-            height="700"
-            fill="#aaaaaa"
-            filter="url(#nnnoise-filter)"
-          ></rect>
-        </svg>
+        <div className="pointer-events-none absolute left-0 top-0 -z-50 hidden h-screen w-screen select-none overflow-hidden lg:block">
+          <div className="bg-[radial-gradient( rgba(255, 255, 255, 0.2) 8%, transparent 8% )]" />
+        </div>
       </div> */}
     </>
   );
