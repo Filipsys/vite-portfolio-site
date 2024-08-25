@@ -25,7 +25,7 @@ export const HomeComponent = () => {
     ],
     libraries: [
       { type: "TailwindCSS", link: "https://tailwindcss.com/", stars: 3 },
-      { type: "Drizzle", link: "https://drizzle.dev/", stars: 2 },
+      { type: "Drizzle", link: "https://orm.drizzle.team/", stars: 2 },
       { type: "React", link: "https://reactjs.org/", stars: 3 },
       {
         type: "Framer motion",
