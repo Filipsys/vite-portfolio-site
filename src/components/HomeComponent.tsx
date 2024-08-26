@@ -13,14 +13,19 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+// import { FullColumn, EmptyColumn } from "@/icons/dev-icons";
 
 export const HomeComponent = () => {
   const WHATIUSEDICT = {
     languages: [
       { type: "Python", link: "https://www.python.org/", stars: 5 },
-      { type: "JavaScript", link: "https://www.javascript.com/", stars: 4 },
-      { type: "TypeScript", link: "https://www.typescriptlang.org/", stars: 3 },
-      { type: "HTML + CSS", link: "https://www.w3.org/html/", stars: 5 },
+      { type: "JavaScript", link: "https://www.javascript.com/", stars: 3 },
+      {
+        type: "TypeScript",
+        link: "https://www.typescriptlang.org/",
+        stars: 2,
+      },
+      { type: "HTML + CSS", link: "https://www.w3.org/html/", stars: 4 },
       { type: "SQL", link: "https://www.sql.org/", stars: 4 },
     ],
     libraries: [
@@ -160,9 +165,11 @@ export const HomeComponent = () => {
                       <div className="flex items-center justify-center gap-[2px] *:size-3">
                         {[...Array(5 - item.stars)].map((_, i) => (
                           <TinyStarIcon key={i} />
+                          // <EmptyColumn key={i} />
                         ))}
                         {[...Array(item.stars)].map((_, i) => (
                           <TinyStarIcon key={i} fill={true} />
+                          // <FullColumn key={i} />
                         ))}
                       </div>
                     </div>

@@ -112,11 +112,11 @@ function App() {
         </main>
       </div>
       {/* <div className="pointer-events-none absolute left-0 top-0 -z-50 hidden h-screen w-screen select-none overflow-hidden lg:block">
-        <div className="absolute h-96 w-96 rounded-full"></div>
-
-        <div className="pointer-events-none absolute left-0 top-0 -z-50 hidden h-screen w-screen select-none overflow-hidden lg:block">
-          <div className="bg-[radial-gradient( rgba(255, 255, 255, 0.2) 8%, transparent 8% )]" />
-        </div>
+        <div
+          className="absolute h-96 w-96 rounded-full bg-white"
+          id="hoveritem"
+          onMouseMove={handleMouseMove}
+        ></div>
       </div> */}
     </>
   );
