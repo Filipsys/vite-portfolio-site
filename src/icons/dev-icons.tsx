@@ -160,3 +160,30 @@ export const InfoIcon = () => (
     <path d="M12 8h.01" />
   </svg>
 );
+
+export const EmptyColumn = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 6 24"
+    stroke="white"
+    strokeWidth="1"
+    fill="none"
+  >
+    <g>
+      <g>
+        <rect x="0.5" y="0.5" width="11" height="23" rx="2.5" />
+      </g>
+    </g>
+  </svg>
+);
+
+export const FullColumn = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 24" fill="white">
+    <g>
+      <g>
+        <rect x="0.5" y="0.5" width="11" height="23" rx="2.5" />
+        <path d="M9,1a2,2,0,0,1,2,2V21a2,2,0,0,1-2,2H3a2,2,0,0,1-2-2V3A2,2,0,0,1,3,1H9M9,0H3A3,3,0,0,0,0,3V21a3,3,0,0,0,3,3H9a3,3,0,0,0,3-3V3A3,3,0,0,0,9,0Z" />
+      </g>
+    </g>
+  </svg>
+);

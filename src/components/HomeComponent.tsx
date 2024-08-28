@@ -13,14 +13,19 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+// import { FullColumn, EmptyColumn } from "@/icons/dev-icons";
 
 export const HomeComponent = () => {
   const WHATIUSEDICT = {
     languages: [
       { type: "Python", link: "https://www.python.org/", stars: 5 },
-      { type: "JavaScript", link: "https://www.javascript.com/", stars: 4 },
-      { type: "TypeScript", link: "https://www.typescriptlang.org/", stars: 3 },
-      { type: "HTML + CSS", link: "https://www.w3.org/html/", stars: 5 },
+      { type: "JavaScript", link: "https://www.javascript.com/", stars: 3 },
+      {
+        type: "TypeScript",
+        link: "https://www.typescriptlang.org/",
+        stars: 2,
+      },
+      { type: "HTML + CSS", link: "https://www.w3.org/html/", stars: 4 },
       { type: "SQL", link: "https://www.sql.org/", stars: 4 },
     ],
     libraries: [
@@ -45,6 +50,16 @@ export const HomeComponent = () => {
       { type: "Bun", link: "https://bun.sh/", stars: 1 },
       { type: "Express", link: "https://expressjs.com/", stars: 3 },
     ],
+  };
+
+  const handleForward = (websiteNumber: number) => {
+    const websites: { [key: number]: string } = {
+      1: "https://github.com/Filipsys",
+      2: "https://linkedin.com/in/filipsysak",
+      3: "mailto:sysakfilip@gmail.com",
+    };
+
+    window.open(websites[websiteNumber], "_blank");
   };
 
   return (
@@ -78,8 +93,11 @@ export const HomeComponent = () => {
         </h2>
 
         <div className="flex flex-col fill-white/50 font-mono text-white/50 *:flex *:cursor-pointer *:justify-between *:text-xs *:font-light *:tracking-wider *:xs:text-sm *:sm:text-base">
-          <div className="group/github transition-colors duration-200 hover:text-white">
-            <a href="https://github.com/Filipsys">
+          <div
+            className="group/github z-50 transition-colors duration-200 hover:text-white"
+            onClick={() => handleForward(1)}
+          >
+            <a href="https://github.com/Filipsys" target="_blank">
               https://github.com/Filipsys
             </a>
 
@@ -90,8 +108,11 @@ export const HomeComponent = () => {
               </div>
             </div>
           </div>
-          <div className="group/linkedin py-1 transition-colors duration-200 hover:text-[#0A66C2] xs:p-0">
-            <a href="https://linkedin.com/in/filipsysak">
+          <div
+            className="group/linkedin z-50 py-1 transition-colors duration-200 hover:text-[#0A66C2] xs:p-0"
+            onClick={() => handleForward(2)}
+          >
+            <a href="https://linkedin.com/in/filipsysak" target="_blank">
               https://linkedin.com/in/filipsysak
             </a>
             <div className="flex items-center gap-2">
@@ -101,7 +122,10 @@ export const HomeComponent = () => {
               </div>
             </div>
           </div>
-          <div className="group/email transition-colors duration-200 hover:text-[#EA4335]">
+          <div
+            className="group/email z-50 transition-colors duration-200 hover:text-[#EA4335]"
+            onClick={() => handleForward(3)}
+          >
             <a href="mailto:sysakfilip@gmail.com">sysakfilip@gmail.com</a>
 
             <div className="flex items-center gap-2">
@@ -123,9 +147,9 @@ export const HomeComponent = () => {
           <h2 className="py-2 text-lg underline underline-offset-4 xs:text-xl">
             Tech I know and use
           </h2>
-          <div className="mb-auto px-1 py-2">
+          <div className="z-50 mb-auto px-1 py-2">
             <HoverCard>
-              <HoverCardTrigger className="*:hidden *:size-4 *:sm:block">
+              <HoverCardTrigger className="z-50 *:hidden *:size-4 *:sm:block">
                 <InfoIcon />
               </HoverCardTrigger>
               <HoverCardContent className="p-2">
@@ -137,13 +161,13 @@ export const HomeComponent = () => {
           </div>
         </div>
 
-        <div className="mb-8 grid w-full grid-cols-1 gap-3 text-white/50 sm:grid-cols-3">
+        <div className="mb-8 grid w-full grid-cols-1 gap-3 text-white/50 sm:grid-cols-3 lg:mb-0">
           {Object.entries(WHATIUSEDICT).map(([key, value]) => (
             <div key={key}>
               <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
                 - {key}
               </p>
-              <Card className="bg-gradient-to-tr from-gray-500/5 to-transparent duration-300 ease-in-out hover:border-white/30">
+              <Card className="bg-gradient-to-tr from-gray-400/5 to-transparent duration-300 ease-in-out">
                 <CardContent className="p-3 text-sm font-light text-white/50 sm:text-base">
                   {value.map((item) => (
                     <div
@@ -153,16 +177,18 @@ export const HomeComponent = () => {
                       <motion.a
                         href={item.link}
                         target="_blank"
-                        className="line-clamp-1 underline-offset-4 hover:underline"
+                        className="z-50 line-clamp-1 underline-offset-4 hover:underline"
                       >
                         {item.type}
                       </motion.a>
                       <div className="flex items-center justify-center gap-[2px] *:size-3">
                         {[...Array(5 - item.stars)].map((_, i) => (
                           <TinyStarIcon key={i} />
+                          // <EmptyColumn key={i} />
                         ))}
                         {[...Array(item.stars)].map((_, i) => (
                           <TinyStarIcon key={i} fill={true} />
+                          // <FullColumn key={i} />
                         ))}
                       </div>
                     </div>
