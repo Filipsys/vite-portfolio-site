@@ -46,9 +46,9 @@ export const HomeComponent = () => {
     tools: [
       { type: "Next.js", link: "https://nextjs.org/", stars: 3 },
       { type: "Git", link: "https://git-scm.com/", stars: 4 },
-      { type: "Vite", link: "https://vitejs.dev/", stars: 2 },
-      { type: "Bun", link: "https://bun.sh/", stars: 1 },
-      { type: "Express", link: "https://expressjs.com/", stars: 3 },
+      { type: "Vite", link: "https://vitejs.dev/", stars: 3 },
+      { type: "Bun", link: "https://bun.sh/", stars: 4 },
+      { type: "Flask", link: "https://expressjs.com/", stars: 3 },
     ],
   };
 
@@ -98,7 +98,7 @@ export const HomeComponent = () => {
             onClick={() => handleForward(1)}
           >
             <a href="https://github.com/Filipsys" target="_blank">
-              https://github.com/Filipsys
+              github.com/Filipsys
             </a>
 
             <div className="flex items-center gap-2">
@@ -113,7 +113,7 @@ export const HomeComponent = () => {
             onClick={() => handleForward(2)}
           >
             <a href="https://linkedin.com/in/filipsysak" target="_blank">
-              https://linkedin.com/in/filipsysak
+              linkedin.com/in/filipsysak
             </a>
             <div className="flex items-center gap-2">
               <p className="hidden xs:block">LinkedIn</p>
@@ -164,7 +164,7 @@ export const HomeComponent = () => {
         <div className="mb-8 grid w-full grid-cols-1 gap-3 text-white/50 sm:grid-cols-3 lg:mb-0">
           {Object.entries(WHATIUSEDICT).map(([key, value]) => (
             <div key={key}>
-              <p className="pl-2 pr-1 font-mono text-base font-light tracking-wider">
+              <p className="pl-2 pr-1 text-base font-light tracking-wider">
                 - {key}
               </p>
               <Card className="bg-gradient-to-tr from-gray-400/5 to-transparent duration-300 ease-in-out">
@@ -177,7 +177,7 @@ export const HomeComponent = () => {
                       <motion.a
                         href={item.link}
                         target="_blank"
-                        className="z-50 line-clamp-1 underline-offset-4 hover:underline"
+                        className="z-50 line-clamp-1 font-mono underline-offset-4 hover:underline"
                       >
                         {item.type}
                       </motion.a>
