@@ -1,15 +1,3 @@
-<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
-  <defs>
-    <filter id="filter">
-      <feGaussianBlur stdDeviation="5" />
-    </filter>
-
-    <mask id="mask">
-      <ellipse cx="50%" cy="50%" rx="25%" ry="25%" fill="white" filter="url(#filter)" />
-    </mask>
-  </defs>
-</svg> -->
-
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000">
   <filter id="filter">
     <feGaussianBlur stdDeviation="15" />
